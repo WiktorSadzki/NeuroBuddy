@@ -1,0 +1,13 @@
+<resources>
+    <string name="email">Podaj adres e-mail</string>
+    <string name="login">Podaj login</string>
+    <string name="password">Podaj hasło</string>
+
+    <string name="monday">Pon</string>
+    <string name="tuesday">Wto</string>
+    <string name="wednesday">Śro</string>
+    <string name="thursday">Czw</string>
+    <string name="friday">Pią</string>
+    <string name="saturday">Sob</string>
+    <string name="sunday">Nie</string>
+</resources>

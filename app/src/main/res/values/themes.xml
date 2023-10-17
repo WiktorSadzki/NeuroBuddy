@@ -1,9 +1,34 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.NeuroBuddy" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Base.Theme.NeuroBuddy." parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/lightBlue</item>
+        <item name="colorPrimaryDark">@color/blue</item>
+        <item name="colorAccent">@color/lightBlue</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.NeuroBuddy" parent="Base.Theme.NeuroBuddy" />
+    <style name="background">
+        <item name="android:background">@color/lightBlue</item>
+    </style>
+
+    <style name="logoBackground">
+        <item name="android:background">@color/white</item>
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
+    <style name="editText">
+        <item name="android:textColorHint">@color/lightGrey</item>
+        <item name="android:editTextColor">@color/darkGrey</item>
+        <item name="colorControlNormal">@color/darkGrey</item>
+        <item name="colorControlActivated">@color/green</item>
+        <item name="colorAccent">@android:color/darker_gray</item>
+        <item name="colorControlHighlight">@color/green</item>
+    </style>
+
+    <style name="homeActivityText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>

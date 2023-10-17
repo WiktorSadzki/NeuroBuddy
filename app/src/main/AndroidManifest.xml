@@ -12,13 +12,43 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NeuroBuddy"
+        android:theme="@style/Base.Theme.NeuroBuddy."
         tools:targetApi="31">
+        <activity
+            android:name=".Plan.ParsePlan"
+            android:exported="false" />
+        <activity
+            android:name=".Plan.RoutineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".Plan.SpecificPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlanAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".AddPlan"
+            android:exported="false" />
+        <activity
+            android:name=".Login.PasswordReset"
+            android:exported="false" />
+        <activity
+            android:name=".Login.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TabsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Plan.GradeBookUrl"
+            android:exported="false" />
         <activity
             android:name=".GradeBookLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Login.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

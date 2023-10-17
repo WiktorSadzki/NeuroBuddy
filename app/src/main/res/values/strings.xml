@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">NeuroBuddy</string>
+    <string-array name="activity_types">
+        <item>Repetitive Plan</item>
+        <item>Specific Plan</item>
+        <item>Repetetive Plan</item>
+    </string-array>
 </resources>

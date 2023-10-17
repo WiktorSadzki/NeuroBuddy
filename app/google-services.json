@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "177690787740",
+    "firebase_url": "https://neurobuddy-d1742-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "neurobuddy-d1742",
+    "storage_bucket": "neurobuddy-d1742.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177690787740:android:dcb8e36685b664ef7ed259",
+        "android_client_info": {
+          "package_name": "com.example.neurobuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177690787740-7d276c6f3bngibgnl51fok2vdo1mjkqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.neurobuddy",
+            "certificate_hash": "6a957c4d7736cc6d33a0f7392a206fb3dd593787"
+          }
+        },
+        {
+          "client_id": "177690787740-u92i35gsec25jmqgrqjlolkq1dqach1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9OKiOscUXr1QBJt-7IhTjXK4u6fnyfZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177690787740-u92i35gsec25jmqgrqjlolkq1dqach1j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
