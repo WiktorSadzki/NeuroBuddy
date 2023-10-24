@@ -4,11 +4,56 @@
     <string name="login">Enter your login</string>
     <string name="password">Enter your password</string>
 
-    <string name="monday">Mon</string>
-    <string name="tuesday">Tue</string>
-    <string name="wednesday">Wed</string>
-    <string name="thursday">Thu</string>
-    <string name="friday">Fri</string>
-    <string name="saturday">Sat</string>
-    <string name="sunday">Sun</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+
+    <string name="title">Title</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="desciption">Desciption</string>
+    <string name="baseline_menu">Context menu</string>
+    <string name="log_out">Log out</string>
+
+    <string-array name="activity_types">
+        <item>Specific Plan</item>
+        <item>Repetitive Plan</item>
+        <item>School plan - url</item>
+    </string-array>
+
+    <string name="durationSpinner">Duration time</string>
+
+    <string name="notSpecified">Not specified</string>
+    <string name="minutes5">5 minutes</string>
+    <string name="minutes15">15 minutes</string>
+    <string name="minutes30">30 minutes</string>
+    <string name="hour1">1 hour</string>
+    <string name="hours2">2 hours</string>
+    <string name="hours3">3 hours</string>
+    <string name="hours4">4 hours</string>
+
+    <string name="planTypeUndefined">Undefined</string>
+    <string name="planTypeLearning">Learning</string>
+    <string name="planTypeWork">Work</string>
+    <string name="planTypeExercise">Exercise</string>
+    <string name="planTypeOther">Other</string>
+    <string name="planTypeExam">Exam</string>
+
+    <string name="planTypeSpinner">Plan type</string>
+
+    <string name="overduePlansText">Overdue tasks!</string>
+    <string name="plansText">Current tasks</string>
+    <string name="checkedPlansText">Completed tasks</string>
 </resources>

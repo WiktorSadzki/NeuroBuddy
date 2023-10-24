@@ -1,49 +1,42 @@
 package com.example.neurobuddy;
 
+import static com.firebase.ui.auth.AuthUI.getApplicationContext;
+
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.example.neurobuddy.Plan.RoutineActivity;
+import com.example.neurobuddy.Plan.SpecificPlanActivity;
+
 public class SpinnerUtil {
-
-    public static void setupSpinner(Context context, Spinner spinner, int arrayResource, final SpinnerItemSelectedListener listener) {
-        // Load the array from resources
-        CharSequence[] originalArray = context.getResources().getTextArray(arrayResource);
-
-        // Create a new array in reverse order
-        CharSequence[] reversedArray = new CharSequence[originalArray.length];
-        for (int i = 0; i < originalArray.length; i++) {
-            reversedArray[i] = originalArray[originalArray.length - i - 1];
-        }
-
-        // Initialize the ArrayAdapter with the reversed array
-        ArrayAdapter<CharSequence> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_item, reversedArray);
+    public static void setupSpinner(Context context, Spinner spinner, int arrayId, SpinnerCallback callback) {
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(context, arrayId, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         spinner.setAdapter(adapter);
-
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            private int previousPosition = -1;
-
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                if (position != previousPosition) {
-                    if (listener != null) {
-                        listener.onItemSelected(position);
-                    }
-                    previousPosition = position;
-                }
+                callback.onItemSelected(position);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
-                // Do nothing
+                // Do nothing here
             }
         });
     }
 
-    public interface SpinnerItemSelectedListener {
+    public interface SpinnerCallback {
         void onItemSelected(int position);
+    }
+
+    public static boolean isCurrentActivity(Activity activity, Class<?> activityClass) {
+        return activityClass.isInstance(activity);
     }
 }

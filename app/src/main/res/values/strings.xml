@@ -1,7 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="activity_types">
-        <item>Repetitive Plan</item>
-        <item>Specific Plan</item>
-        <item>Repetetive Plan</item>
-    </string-array>
+    <array name="duration_array">
+        <item>@string/notSpecified</item>
+        <item>@string/minutes5</item>
+        <item>@string/minutes15</item>
+        <item>@string/minutes30</item>
+        <item>@string/hour1</item>
+        <item>@string/hours2</item>
+        <item>@string/hours3</item>
+        <item>@string/hours4</item>
+    </array>
+
+    <array name="plan_type_array">
+        <item>@string/planTypeUndefined</item>
+        <item>@string/planTypeExam</item>
+        <item>@string/planTypeLearning</item>
+        <item>@string/planTypeWork</item>
+        <item>@string/planTypeExercise</item>
+        <item>@string/planTypeOther</item>
+    </array>
 </resources>

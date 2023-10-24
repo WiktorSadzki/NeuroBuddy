@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="DayOfTheWeekStyle">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">60dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:background">@drawable/day_radio_checked</item>
         <item name="android:button">@android:color/transparent</item>
@@ -14,4 +14,30 @@
         <item name="android:padding">5sp</item>
         <item name="android:layout_margin">5sp</item>
     </style>
+
+
+    <style name="InputStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layout_constraintWidth_default">percent</item>
+        <item name="layout_constraintWidth_percent">0.9</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="CheckBoxStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/day_check</item>
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">5sp</item>
+        <item name="android:layout_margin">5sp</item>
+    </style>
+
 </resources>

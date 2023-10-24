@@ -2,18 +2,59 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
+        android:name="com.chaquo.python.android.PyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Neuro Buddy"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.NeuroBuddy."
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".SignLanguage"
+            android:exported="false" />
+        <activity
+            android:name=".FormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Plan.Vulcan_synchronize_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Notes.CreateNotes"
+            android:exported="false" />
+        <activity
+            android:name=".Notes.Notes"
+            android:exported="false" />
+        <activity
+            android:name=".Plan.Vulcan_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Plan.SchoolplanUrl"
+            android:exported="false" />
+        <activity
+            android:name=".Plan.GradeBookLogin"
+            android:exported="false" />
         <activity
             android:name=".Plan.ParsePlan"
             android:exported="false" />
@@ -21,16 +62,7 @@
             android:name=".Plan.RoutineActivity"
             android:exported="false" />
         <activity
-            android:name=".ActivityAdapter"
-            android:exported="false" />
-        <activity
             android:name=".Plan.SpecificPlanActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PlanAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".AddPlan"
             android:exported="false" />
         <activity
             android:name=".Login.PasswordReset"
@@ -45,9 +77,6 @@
             android:name=".Plan.GradeBookUrl"
             android:exported="false" />
         <activity
-            android:name=".GradeBookLoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".Login.MainActivity"
             android:exported="true">
             <intent-filter>
@@ -56,6 +85,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".YourNotificationReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".LearningPlanJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ocr" />
     </application>
 
 </manifest>

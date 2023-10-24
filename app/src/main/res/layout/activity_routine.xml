@@ -1,14 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
     tools:context=".Plan.RoutineActivity">
 
-    <include
-        layout="@layout/planlist"
-        android:id="@+id/linearLayout">
-    </include>
+    <LinearLayout
+        android:id="@+id/LLVisitorList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <include
+            layout="@layout/planlist"
+            android:id="@+id/linearLayout">
+        </include>
+
+        <EditText
+            android:id="@+id/planTitle"
+            style="@style/InputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="@string/title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="30sp"
+            android:layout_marginLeft="30sp"/>
+
+        <EditText
+            android:id="@+id/planDescription"
+            style="@style/InputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="@string/desciption"
+            app:layout_constraintBottom_toTopOf="@+id/planSubmit"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkboxGridLayout"
+            app:layout_constraintVertical_bias="0.137"
+            android:layout_marginRight="30sp"
+            android:layout_marginLeft="30sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/planTypeSpinner"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/planType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/plan_type_array"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <GridLayout
+            android:id="@+id/checkboxGridLayout"
+            android:layout_width="394dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:columnCount="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/planTitle">
+
+            <CheckBox
+                android:id="@+id/monday"
+                style="@style/CheckBoxStyle"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:text="@string/monday" />
+
+            <CheckBox
+                android:id="@+id/tuesday"
+                style="@style/CheckBoxStyle"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:text="@string/tuesday" />
+
+            <CheckBox
+                android:id="@+id/wednesday"
+                style="@style/CheckBoxStyle"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:text="@string/wednesday" />
+
+            <CheckBox
+                android:id="@+id/thursday"
+                style="@style/CheckBoxStyle"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:text="@string/thursday" />
+
+            <CheckBox
+                android:id="@+id/friday"
+                style="@style/CheckBoxStyle"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:text="@string/friday" />
+
+            <CheckBox
+                android:id="@+id/saturday"
+                style="@style/CheckBoxStyle"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:text="@string/saturday" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1" />
+
+            <CheckBox
+                android:id="@+id/sunday"
+                style="@style/CheckBoxStyle"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:text="@string/sunday" />
+        </GridLayout>
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/planDescription"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/durationSpinner"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/durationSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/duration_array"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/planSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.864" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/planSubmit"
+                app:layout_constraintHorizontal_bias="0.049"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.864" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

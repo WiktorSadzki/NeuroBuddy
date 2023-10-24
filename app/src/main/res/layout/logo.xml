@@ -8,6 +8,7 @@
     android:background="@drawable/text_bg"
     tools:ignore="MissingConstraints"
     android:theme="@style/logoBackground"
+    android:backgroundTint="@color/blue"
     android:orientation="vertical">
 
     <TextView
@@ -16,8 +17,9 @@
         android:layout_height="wrap_content"
         android:paddingStart="30sp"
         android:text="Neuro Buddy"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:textSize="50sp"
+        android:backgroundTint="@color/fui_transparent"
         app:fontFamily="sans-serif-thin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"

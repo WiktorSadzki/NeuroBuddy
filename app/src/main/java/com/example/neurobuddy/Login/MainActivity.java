@@ -65,9 +65,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button loginWithGoogle = findViewById(R.id.loginWithGoogle);
         loginWithGoogle.setOnClickListener(this);
 
-        Button continueWithoutLogin = findViewById(R.id.continueWithoutLogin);
-        continueWithoutLogin.setOnClickListener(this);
-
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("users");
     }
@@ -91,8 +88,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             toRegister();
         } else if (id == R.id.loginWithGoogle) {
             googleSignIn();
-        } else if (id == R.id.continueWithoutLogin) {
-            goToHomeActivity();
         } else if (id == R.id.forgotPassword) {
             goToPasswordResetActivity();
         }

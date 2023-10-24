@@ -1,0 +1,1 @@
+pyOpenSSL==latest_version_supported_by_python_3.10

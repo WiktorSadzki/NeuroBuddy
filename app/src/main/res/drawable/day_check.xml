@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@drawable/daybuttonchecked" android:state_checked="true"/>
+    <item android:drawable="@drawable/daybuttonunchecked" android:state_checked="false"/>
+</selector>

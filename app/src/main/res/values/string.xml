@@ -3,11 +3,56 @@
     <string name="login">Podaj login</string>
     <string name="password">Podaj hasło</string>
 
-    <string name="monday">Pon</string>
-    <string name="tuesday">Wto</string>
-    <string name="wednesday">Śro</string>
-    <string name="thursday">Czw</string>
-    <string name="friday">Pią</string>
-    <string name="saturday">Sob</string>
-    <string name="sunday">Nie</string>
+    <string name="monday">Poniedziałek</string>
+    <string name="tuesday">Wtorek</string>
+    <string name="wednesday">Środa</string>
+    <string name="thursday">Czwartek</string>
+    <string name="friday">Piątek</string>
+    <string name="saturday">Sobota</string>
+    <string name="sunday">Niedziela</string>
+
+    <string name="mon">Pon</string>
+    <string name="tue">Wto</string>
+    <string name="wed">Śro</string>
+    <string name="thu">Czw</string>
+    <string name="fri">Pią</string>
+    <string name="sat">Sob</string>
+    <string name="sun">Nie</string>
+
+    <string name="title">Tytuł</string>
+    <string name="confirm">Zatwierdź</string>
+    <string name="cancel">Anuluj</string>
+    <string name="desciption">Opis</string>
+    <string name="baseline_menu">Menu kontekstowe</string>
+    <string name="log_out">Wyloguj się</string>
+
+    <string-array name="activity_types">
+        <item>Dokładny plan</item>
+        <item>Powtarzający się plan</item>
+        <item>Plan lekcji - url</item>
+    </string-array>
+
+    <string name="notSpecified">Nieokreślony</string>
+    <string name="minutes5">5 minut</string>
+    <string name="minutes15">15 minut</string>
+    <string name="minutes30">30 minut</string>
+    <string name="hour1">1 godzina</string>
+    <string name="hours2">2 godziny</string>
+    <string name="hours3">3 godziny</string>
+    <string name="hours4">4 godziny</string>
+
+    <string name="planTypeUndefined">Nieokreślony</string>
+    <string name="planTypeLearning">Nauka</string>
+    <string name="planTypeWork">Praca</string>
+    <string name="planTypeExercise">Ćwiczenia</string>
+    <string name="planTypeOther">Inne</string>
+    <string name="planTypeExam">Sprawdzian</string>
+
+    <string name="durationSpinner">Czas trwania</string>
+
+    <string name="planTypeSpinner">Typ planu</string>
+
+    <string name="overduePlansText">Zaległe plany!</string>
+    <string name="plansText">Aktualne plany</string>
+    <string name="checkedPlansText">Ukończone plany</string>
 </resources>

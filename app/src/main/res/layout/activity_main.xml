@@ -13,24 +13,6 @@
     </include>
 
     <Button
-        android:id="@+id/continueWithoutLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30sp"
-        android:layout_marginEnd="30sp"
-        android:background="@drawable/long_buttons"
-        android:text="Kontynuuj bez logowania"
-        android:textColor="@drawable/button_text"
-        app:backgroundTint="#86E1E0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginWithGoogle"
-        app:layout_constraintVertical_bias="0.333"
-        tools:ignore="HardcodedText,MissingConstraints" />
-
-    <Button
         android:id="@+id/loginWithGoogle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,7 +23,7 @@
         android:paddingEnd="30sp"
         android:text="Zaloguj z Google"
         android:textColor="@drawable/button_text"
-        app:backgroundTint="#DE5246"
+        app:backgroundTint="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -118,6 +100,7 @@
         android:layout_marginStart="30sp"
         android:layout_marginEnd="30sp"
         android:background="@drawable/long_buttons"
+        android:backgroundTint="@color/blue"
         android:paddingEnd="30sp"
         android:text="Zaloguj się"
         android:textColor="@drawable/button_text"

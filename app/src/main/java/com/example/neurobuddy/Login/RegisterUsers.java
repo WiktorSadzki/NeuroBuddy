@@ -6,16 +6,20 @@ import java.util.List;
 public class RegisterUsers {
     private String login;
     private String email;
-    private List<String> plans; // Add this line
+    private List<String> plans;
+    private String path;
+    private int points;
 
     public RegisterUsers() {
-        // Default constructor required for calls to DataSnapshot.getValue(RegisterUsers.class)
+
     }
 
     public RegisterUsers(String login, String email) {
         this.login = login;
         this.email = email;
-        this.plans = new ArrayList<>(); // Initialize the plans list
+        this.plans = new ArrayList<>();
+        this.points = 0;
+        this.path = "";
     }
 
     public String getLogin() {
@@ -29,6 +33,32 @@ public class RegisterUsers {
     public List<String> getPlans() {
         return plans;
     }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPlans(List<String> plans) {
+        this.plans = plans;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
 }
-
-
