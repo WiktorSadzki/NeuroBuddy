@@ -1,4 +1,4 @@
-NeuroBuddy to aplikacja do pomocy osobom neuroatypowym w aplikacji zastosowano neutralne kolory, ze względu na wrażliwości sensoryczne osób na spektrum autyzmu.
+<h2>NeuroBuddy to aplikacja do pomocy osobom neuroatypowym w aplikacji zastosowano neutralne kolory, ze względu na wrażliwości sensoryczne osób na spektrum autyzmu.</h2>
 
 Jak korzystać z pobrania danych z dziennika Uonet?:
 1. Pobrać dane z zakładki "Dostęp mobilny":
