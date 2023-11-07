@@ -6,7 +6,9 @@ import static com.google.common.collect.Iterables.size;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import android.Manifest;
 import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,7 +17,9 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -32,6 +36,7 @@ import com.example.neurobuddy.Login.MainActivity;
 import com.example.neurobuddy.Notes.Notes;
 import com.example.neurobuddy.Plan.CurrentDate;
 import com.example.neurobuddy.Plan.Plan;
+import com.example.neurobuddy.Plan.RankingActivity;
 import com.example.neurobuddy.Plan.SpecificPlanActivity;
 import com.example.neurobuddy.Plan.Vulcan_Activity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -57,6 +62,7 @@ import java.util.*;
 
 public class TabsActivity extends AppCompatActivity implements ValueEventListener {
 
+    private static final int NOTIFICATION_PERMISSION_REQUEST_CODE = 1;
     GoogleSignInClient mGoogleSignInClient;
     FirebaseAuth mAuth;
 
@@ -91,6 +97,8 @@ public class TabsActivity extends AppCompatActivity implements ValueEventListene
         scheduleLearningPlanJobService();
         checkAndUpdatePlansOnceADay();
 
+        checkAndRequestNotificationPermission();
+
         findViewById(R.id.dropdown_menu).setOnClickListener(v -> {
             PopupMenu popup = new PopupMenu(this, v);
             popup.getMenuInflater().inflate(R.menu.actions, popup.getMenu());
@@ -105,7 +113,10 @@ public class TabsActivity extends AppCompatActivity implements ValueEventListene
                 } else if (itemId == R.id.log_out_button) {
                     logOutUser();
                     return true;
-                } else if (itemId == R.id.sign_language) {
+                }else if (itemId == R.id.ranking) {
+                    toRanking();
+                    return true;
+                } else if (itemId == R.id.emotions) {
                     toSignActivity();
                     return true;
                 } else {
@@ -235,6 +246,28 @@ public class TabsActivity extends AppCompatActivity implements ValueEventListene
                 LocalTime notificationTime = LocalTime.parse(time);
 
                 scheduleNotification(plan.getTitle(), notificationTime);
+            }
+        }
+    }
+
+    private void checkAndRequestNotificationPermission() {
+        if (checkSelfPermission(Manifest.permission.VIBRATE) != PackageManager.PERMISSION_GRANTED ||
+                checkSelfPermission(Manifest.permission.WAKE_LOCK) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.VIBRATE, Manifest.permission.WAKE_LOCK}, NOTIFICATION_PERMISSION_REQUEST_CODE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == NOTIFICATION_PERMISSION_REQUEST_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED &&
+                    grantResults.length > 1 && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+                // Permission granted, you can proceed with sending notifications
+            } else {
+                // Permission denied, handle accordingly (e.g., show a message)
+                Toast.makeText(this, "Permission denied. Notifications may not work properly.", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -642,6 +675,11 @@ public class TabsActivity extends AppCompatActivity implements ValueEventListene
 
     private void toSignActivity(){
         Intent intent = new Intent(getApplicationContext(), SignLanguage.class);
+        startActivity(intent);
+    }
+
+    private void toRanking(){
+        Intent intent = new Intent(getApplicationContext(), RankingActivity.class);
         startActivity(intent);
     }
 

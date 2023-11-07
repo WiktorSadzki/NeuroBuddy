@@ -160,6 +160,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        } else{
+            path = "images/default.png";
         }
     }
 
@@ -255,23 +257,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                                         "Pomyślnie zarejestrowano. Zweryfikuj swój adres e-mail.",
                                                         Toast.LENGTH_LONG).show();
 
-                                                // Set additional user information
                                                 DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("users").child(userId);
                                                 userRef.child("path").setValue(path);
 
-                                                // Log in after registration
                                                 logIn();
                                             } else {
                                                 Toast.makeText(RegisterActivity.this,
-                                                        "An error occurred! Please try again later.",
+                                                        "Wystąpił problem, spróbuj ponownie później.",
                                                         Toast.LENGTH_LONG).show();
                                             }
                                         }
                                     });
                         } else {
-                            // Registration failed
                             Toast.makeText(RegisterActivity.this,
-                                    "An error occurred! Please try again later.",
+                                    "Wystąpił problem, spróbuj ponownie później.",
                                     Toast.LENGTH_LONG).show();
                         }
                     }

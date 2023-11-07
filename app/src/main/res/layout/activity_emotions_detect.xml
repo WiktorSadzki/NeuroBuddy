@@ -4,13 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Plan.Vulcan_Activity">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewGrades"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_grade" />
+    tools:context=".Login.EmotionsDetectActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

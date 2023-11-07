@@ -15,7 +15,7 @@
 
     <style name="logoBackground">
         <item name="android:background">@color/white</item>
-        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:backgroundTint">@color/blue</item>
     </style>
 
     <style name="editText">

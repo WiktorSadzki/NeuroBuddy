@@ -47,7 +47,6 @@ public class Vulcan_synchronize_activity extends AppCompatActivity {
 
         ipAddressEditText = findViewById(R.id.ipAdress);
         confirmButton = findViewById(R.id.confirm_button);
-        textView = findViewById(R.id.textView);
 
         confirmButton.setOnClickListener(v -> {
             String serverIP = ipAddressEditText.getText().toString();

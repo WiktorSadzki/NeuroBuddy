@@ -1,12 +1,16 @@
 package com.example.neurobuddy.Login;
 
+import com.example.neurobuddy.Plan.Plan;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class RegisterUsers {
     private String login;
     private String email;
-    private List<String> plans;
+    private Map<String, Plan> plans;
     private String path;
     private int points;
 
@@ -17,7 +21,7 @@ public class RegisterUsers {
     public RegisterUsers(String login, String email) {
         this.login = login;
         this.email = email;
-        this.plans = new ArrayList<>();
+        this.plans = new HashMap<>();
         this.points = 0;
         this.path = "";
     }
@@ -30,7 +34,7 @@ public class RegisterUsers {
         return email;
     }
 
-    public List<String> getPlans() {
+    public Map<String, Plan> getPlans() {
         return plans;
     }
 
@@ -42,7 +46,8 @@ public class RegisterUsers {
         this.email = email;
     }
 
-    public void setPlans(List<String> plans) {
+
+    public void setPlans(Map<String, Plan> plans) {
         this.plans = plans;
     }
 
@@ -55,7 +60,11 @@ public class RegisterUsers {
     }
 
     public int getPoints() {
-        return points;
+        try {
+            return Integer.parseInt(String.valueOf(points));
+        } catch (NumberFormatException e) {
+            return 0;
+        }
     }
 
     public void setPoints(int points) {

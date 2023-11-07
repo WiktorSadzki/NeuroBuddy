@@ -2,12 +2,16 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://repo.spring.io/plugins-release' }
         maven {
-            url "https://jitpack.io"
+            name 'ossrh-snapshot'
+            url 'https://oss.sonatype.org/content/repositories/snapshots'
         }
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -15,7 +19,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
 
 rootProject.name = "NeuroBuddy"
 include ':app'

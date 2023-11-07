@@ -6,11 +6,17 @@
     <item
         android:id="@+id/notes_button"
         android:title="Notatki" />
+
+    <item
+        android:id="@+id/emotions"
+        android:title="Test wykrywanie emocji" />
+
+    <item
+        android:id="@+id/ranking"
+        android:title="Ranking" />
+
     <item
         android:id="@+id/log_out_button"
         android:title="@string/log_out" />
-    <item
-        android:id="@+id/sign_language"
-        android:title="Test alfabet migowy" />
 
 </menu>

@@ -44,9 +44,7 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.concurrent.ExecutionException;
 
-// ... (Your existing imports)
-
-public class SignLanguage extends AppCompatActivity {
+public class EmotionsDetectActivity extends AppCompatActivity {
 
     private Interpreter tflite;
     private PreviewView cameraPreview;
@@ -96,11 +94,11 @@ public class SignLanguage extends AppCompatActivity {
 
                         if (bitmap != null) {
                             // Your existing logic
-                            String recognizedLetter = recognizeSign(bitmap);
-                            Log.v("recognizedLetter", recognizedLetter);
-                            updateUI(recognizedLetter);
+                            String recognizedEmotion = recognizeSign(bitmap);
+                            Log.v("recognizedEmotion", recognizedEmotion);
+                            updateUI(recognizedEmotion);
                         } else {
-                            Log.e("ImageProxyToBitmap", "Bitmap is null");
+                            Log.e("ImageProxyToBitmap", "null");
                         }
 
                         // Close the ImageProxy
@@ -116,8 +114,7 @@ public class SignLanguage extends AppCompatActivity {
 
             } catch (ExecutionException | InterruptedException e) {
                 e.printStackTrace();
-                Log.e("SignLanguage", "Error setting up camera: " + e.getMessage());
-                // Handle the error, show a message to the user, or log it appropriately
+                Log.e("Emotions", "Error: " + e.getMessage());
             }
         }, ContextCompat.getMainExecutor(this));
 
@@ -125,7 +122,7 @@ public class SignLanguage extends AppCompatActivity {
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle delete button click
+
             }
         });
     }
@@ -147,16 +144,15 @@ public class SignLanguage extends AppCompatActivity {
     }
 
     private String recognizeSign(Bitmap bitmap) {
-        return "A";
+        return "angry";
     }
 
-    private void updateUI(String recognizedLetter) {
+    private void updateUI(String recognizedEmotion) {
 
     }
 
     @Override
     protected void onDestroy() {
-        // Close the TensorFlow Lite interpreter when the activity is destroyed
         if (tflite != null) {
             tflite.close();
         }
