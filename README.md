@@ -1,6 +1,6 @@
 <h2>NeuroBuddy to aplikacja do pomocy osobom neuroatypowym w aplikacji zastosowano neutralne kolory, ze względu na wrażliwości sensoryczne osób na spektrum autyzmu.</h2>
 
-<h3> <a href="https://drive.google.com/file/d/1WMtT2OPMxzclmWixY-IAWf_YRzyd7mRH/view?usp=drivesdk"> Kod aplikacji napisany w python'ie. </a> </h3>
+<h3> <a href="https://drive.google.com/file/d/1WMtT2OPMxzclmWixY-IAWf_YRzyd7mRH/view?usp=drivesdk"> `Link` Kod aplikacji napisany w python'ie. </a> </h3>
 
 Jak korzystać z pobrania danych z dziennika Uonet?:
 1. Pobrać dane z zakładki "Dostęp mobilny":
